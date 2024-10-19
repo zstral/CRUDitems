@@ -1,0 +1,31 @@
+@page
+@model CRUD.Pages.Productos.IndexModel
+@{
+    ViewData["Title"] = "Listado de productos";
+}
+
+<h2>Productos</h2>
+<a asp-page="Create">Agregar nuevo producto</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Productos)
+        {
+            <tr>
+                <td>@item.Nombre</td>
+                <td>@item.Precio</td>
+                <td>
+                    <a asp-page="Edit" asp-route-id="@item.Id">Editar</a> |
+                    <a asp-page="Delete" asp-route-id="@item.Id">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,12 @@
+# ASP.NET Core .gitignore file
+bin/
+obj/
+*.db
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+.vscode/
+.idea/
+node_modules/
+wwwroot/lib/

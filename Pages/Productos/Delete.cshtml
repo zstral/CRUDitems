@@ -1,0 +1,16 @@
+@page
+@model CRUD.Pages.Productos.DeleteModel
+@{
+    ViewData["Title"] = "Eliminar producto";
+}
+
+<h2>Eliminar producto</h2>
+<p>¿Estás seguro de eliminar este producto?</p>
+<div>
+    <h4>@Model.Producto.Nombre</h4>
+    <p>Precio: @Model.Producto.Precio</p>
+</div>
+<form method="post">
+    <button type="submit" class="btn btn-danger">Eliminar</button>
+    <a asp-page="Index" class="btn btn-secondary">Cancelar</a>
+</form>

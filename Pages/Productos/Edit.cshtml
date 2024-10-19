@@ -1,0 +1,25 @@
+@page
+@model CRUD.Pages.Productos.EditModel
+@{
+    ViewData["Title"] = "Editar producto";
+}
+
+<h2>Editar producto</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Producto.Nombre"></label>
+        <input asp-for="Producto.Nombre" class="form-control" />
+        <span asp-validation-for="Producto.Nombre" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Producto.Precio"></label>
+        <input asp-for="Producto.Precio" class="form-control" />
+        <span asp-validation-for="Producto.Precio" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Producto.Descripcion"></label>
+        <input asp-for="Producto.Descripcion" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar cambios</button>
+</form>
